@@ -1,0 +1,68 @@
+// Printing Hello World
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello World";    //print output in same line
+    cout << "\n";             // nextline
+    cout << "Hello" << endl << "World"; //here endl is for printing in next line
+    return 0;
+}
+
+
+// Taking input from users
+#include <iostream>
+using namespace std;
+int main() {
+    int apples;
+    cin >> apples;
+    cout << "Number of apples : " << apples;
+    return 0;
+}
+
+
+// Swapping two values
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    int temp;
+    cin >> a;
+    cout << "value of a before swapping : " << a << endl;
+    cin >> b;
+    cout << "value of b before swapping: " << b << endl;
+    temp = a;
+    a = b;
+    b = temp;
+    cout << "value of a after swapping : " << a << endl;
+    cout << "value of b after swapping : " << b << endl;
+    return 0;
+}
+
+
+// Operators in c++
+
+// Arithmetic operators (+, -, *, /, %)
+// Relational Operators (==, !, >, <, <=, >=)
+// Logical operators (&&, ||, !)
+// Assignment operators (=, +=, -=, *=, /=, %=) 
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 6;
+    int b = 3;
+    cout << a + b << endl;
+    cout << a - b << endl;
+    cout << a * b << endl;
+    cout << a / b << endl;
+    cout << a % b << endl;
+
+    cout << (a==b) << endl;
+    cout << (a!=b) << endl;
+    cout << (a<b) << endl;
+    cout << (a>b) << endl;
+    cout << (a<=b) << endl;
+    cout << (a>=b) << endl;
+
+    return 0;
+}
