@@ -1,0 +1,101 @@
+// Print the sum of n natural number where n is the input using while loop.
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num;
+    int sum = 0;
+    cout << "Enter a number :";
+    cin >> num;
+    int i = 1; //loop variable
+    while(i <= num){
+        sum = sum + i;
+        i++;
+    }
+    cout << "Sum of first " << num << " natural number is: " << sum << endl;
+    return 0;
+}
+
+
+// Print the sum of n natural number where n is the input using for loop.
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num;
+    int sum = 0;
+    cout << "Enter a number : ";
+    cin >> num;
+    for(int i = 1; i <= num; i++){
+        sum = sum + i;
+    }
+    cout << "Sum of first " << num << " natural number is: " << sum << endl;
+    return 0;
+}
+
+
+// Print the first multiple of 5 which is also a multiple of 7 with while and for loop.
+
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 5;
+    while(true){
+        if(i % 7 == 0){
+            break;
+        }
+        i+=5;
+    }
+    cout << i;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+int main() {
+    for(int i = 5; ;i+=5){
+        if(i % 7 == 0){
+            cout << i;
+            break;
+        }
+    }
+    return 0;
+}
+
+
+// Print the sum of the stream of N integers in the input using do while loop.
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num;
+    int sum = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+    int i = 1;
+    do{
+        sum = sum + i;
+        i++;
+    }while(i <= num);
+    cout << "Sum of " << num << " integer is " << sum;
+    return 0;
+}
+
+
+// Print all the value between 1 to 50 except multiple of 3
+
+#include <iostream>
+using namespace std;
+int main() {
+    for(int i = 1; i <= 50; i++){
+        if(i%3==0){
+            continue;
+        }else{
+            cout << i << endl;
+        }
+    }
+    return 0;
+}
+
+
+// 
