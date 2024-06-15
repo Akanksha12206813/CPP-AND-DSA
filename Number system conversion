@@ -1,0 +1,38 @@
+// Binary to decimal number
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num;
+    cin >> num;
+    int ans = 0;
+    int power = 1;
+    while(num>0){
+        int last = num % 10;
+        ans = ans + last*power;
+        power = power*2;
+        num = num/10;
+    }
+    cout << ans << endl;
+    return 0;
+}
+
+
+// Decimal to binary number
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num;
+    cin >> num;
+    int ans = 0;
+    int power = 1;
+    while(num>0){
+        int parityDigit = num % 2;
+        ans = ans + parityDigit*power;
+        power = power*10;
+        num = num/2;
+    }
+    cout << ans << endl;
+    return 0;
+}
