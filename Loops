@@ -98,4 +98,357 @@ int main() {
 }
 
 
-// 
+// Pattern printing using loops
+
+******
+******
+******
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m,n;
+    cin >> m >> n;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= m;j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+******
+*    *
+*    *
+******
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m,n;
+    cin >> m >> n;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= m;j++){
+            if(i == 1 || j == 1 || i == n || j == m){
+                cout << "*";
+            }else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+*
+**
+***
+****
+*****
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m;
+    cin >> m;
+    for(int i = 1; i <= m; i++){
+        for(int j = 1; j <= i; j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+*****
+****
+***
+**
+*
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m;
+    cin >> m;
+    for(int i = 1; i <= m; i++){
+        for(int j = 1; j <= m-i+1; j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+    *
+   ***
+  *****
+ *******
+*********
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m;
+    cin >> m;
+    for(int i = 1; i <= m; i++){
+        for(int j = 1; j <= m-i; j++){
+            cout << " ";
+        }
+        for(int j = 1; j <= 2*i-1;j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+1234567
+2345671
+3456712
+4567123
+5671234
+6712345
+7123456
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m;
+    cin >> m;
+    for(int i = 1;i <= m; i++){
+        for(int j = i; j <= m; j++){
+            cout << j;
+        }
+        for(int j = 1; j <= (i-1); j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+123456
+123456
+123456
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m;
+    cin >> m;
+    for(int i = 1;i <= m; i++){
+        for(int j = 1; j <= m; j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+123456
+1    6
+1    6
+123456
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m,n;
+    cin >> m >> n;
+    for(int i = 1;i <= m; i++){
+        for(int j = 1; j <= n; j++){
+            if(i == 1 || j == 1 || i == m || j == n){
+                cout << j;
+            }else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+121212
+212121
+121212
+212121
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m,n;
+    cin >> m >> n;
+    for(int i = 1;i <= m; i++){
+        for(int j = 1; j <= n; j++){
+            if((i+j)%2==0){
+                cout << "1";
+            }else{
+                cout << "2";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+1
+12
+123
+1234
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m;
+    cin >> m;
+    for(int i = 1;i <= m; i++){
+        for(int j = 1; j <= i; j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+   1
+  121
+ 12321
+1234321
+
+#include <iostream>
+using namespace std;
+int main() {
+    int m;
+    cin >> m;
+    for(int i = 1;i <= m; i++){
+        for(int j = 1; j <= m-i; j++){
+            cout << " ";
+        }
+        for(int j = 1; j<= i ; j++){
+            cout << j;
+        }
+        for(int j = i-1; j >= 1;j--){
+            cout << j;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+// Count the number of digits for a given number
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    int original_number = num;
+    int count = 0;
+    while(num > 0){
+        count++;
+        num = num / 10;
+    }
+    cout << "Number of digit in " << original_number << " is : " << count << endl;
+}
+
+
+// Find the sum of digits in a given number n
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    int original_number = num;
+    int sum = 0;
+    while(num > 0){
+        int last = num % 10;
+        sum = sum + last;
+        num = num/10;
+    }
+    cout << "Sum of digit " << original_number << " is : " << sum << endl;
+}
+
+
+// Reverse the digit of a number
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    int original_number = num;
+    int reverse = 0;
+    while(num > 0){
+        int last = num % 10;
+        reverse = reverse * 10 + last;
+        num = num/10;
+    }
+    cout << "Reverse of digit " << original_number << " is : " << reverse << endl;
+}
+
+
+// Find the sum of following series s = 1-2+3-4...n
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout << "Enter number: ";
+    cin >> num;
+    int sum = 0;
+    for(int i = 1; i <= num; i++){
+        if(i % 2 == 0){
+            sum = sum-i;
+        }else{
+            sum = sum+i;
+        }
+    }
+    cout << "Sum of series is : " << sum << endl;
+}
+
+
+// Print the first n factorial numbers
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    int fact = 1;
+    for(int i = 1; i <= num; i++){
+        fact = fact * i;
+        cout << fact << endl;
+    }
+}
+
+// Given 2 number a and b. Find a raise to the power b.
+
+#include <iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin >> a >> b;
+    int result = 1;
+    for(int i = 1; i <= b; i++){
+        result = result * a;
+    }
+    cout << result;
+}
